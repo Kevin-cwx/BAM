@@ -1,0 +1,32 @@
+.Parent_Browse_Areas{
+    width: 10%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.Button_In_2_Column{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Browse_Areas_Title{
+    /* font-size: 60%; */
+    white-space: nowrap;
+    text-align: center;
+    align-items: center;
+ 
+}
+
+.Browse_Areas_Button{
+    font-size: 33px;
+    color: black;
+   /* padding: 0; */
+}
+
+.Parent_Browse_Areas_Title_And_Counter{
+    display: flex;
+    align-items: center;
+}
+.Browse_Area_Counter_Display{
+    margin-left: 40%;
+}

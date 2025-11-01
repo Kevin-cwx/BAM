@@ -1,0 +1,44 @@
+/* Billboard Image Slideshow Small */
+.image-container {
+    position: relative;
+    display: inline-block;
+    height: 200px;
+    /* height: 103%; */
+    width: 100%;
+    z-index: 2;
+}
+
+.Parent_Image_Slideshow {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the entire container */
+    display: block;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.left_overlay,
+.right_overlay {
+    position: absolute;
+    bottom: -9%;
+    transform: translateY(-50%);
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    line-height: 2;
+    cursor: pointer;
+    border-radius: 10px;
+    color: black;
+    z-index: 999;
+    /* padding: 0px 0px; */
+}
+
+.left_overlay {
+    /* left: 0; */
+}
+
+.right_overlay {
+    right: 0;
+}

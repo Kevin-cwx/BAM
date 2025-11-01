@@ -1,0 +1,14 @@
+#Parent_Hidden_Billboard_Information_Text{
+    /* border: red 4px solid; */
+    font-size: 20px;
+    position: absolute;
+    /* width: 16%; */
+    width: 100%;
+}
+
+#HBI_Name{
+    padding-right: 40px;
+}
+#HBI_Price{
+    padding-top:10px ;
+}

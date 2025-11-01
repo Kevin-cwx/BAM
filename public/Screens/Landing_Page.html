@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+
+  <!-- <link rel="stylesheet" href="../StyleSheets/CSS_Importer.css">
+  <link rel="stylesheet" href="../StyleSheets/Brand_Kit.css"> -->
+
+  <!-- <link id="Landing_Page_StyleSheet" rel="stylesheet" href="../StyleSheets/Style_A/Landing_Page.css">
+  <link id="CSS_Importer_StyleSheet" rel="stylesheet" href="../StyleSheets/Style_A/CSS_Importer.css">
+  <link id="Brand_Kit_StyleSheet" rel="stylesheet" href="../StyleSheets/Style_A/Brand_Kit.css"> -->
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/x-icon" href="../Media/Ico/white_billboard.ico">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Billboard Ad Manager -->
+  <title> BAM - Billboard Ad Manager</title>
+</head>
+
+<body class="Non_Drag_Image">
+  <img src="../Media/Landing_Page_Images/1.jpeg" class="Non_Drag_Image Background_Image" id="BackgroundImageID"
+    alt="Background Image">
+
+  <div class="Background_Video_Container">
+    <video class="Background_Video" id="Background_Video_ID" autoplay muted loop>
+      <source src="../Media/TimeLapse/US_City_1.mp4" type="video/mp4">
+
+
+    </video>
+  </div>
+
+  <div id="Parent_Landing_Page_Text_1">
+    <p class="Landing_Page_Large_Text">Overview of <span id="Landing_Page_Text_Accent">ALL</span> Billboards on Curacao
+    </p>
+    <button type="button" class="Button" id="StartBtnLandingPage" onclick="StartBtn()">Start
+      ➤</button>
+  </div>
+
+  <div id="Parent_Landing_Page_Text_2">
+    <p class="Landing_Page_Large_Text">Billboard Ad Manager</p>
+    <button type="button" class="Button" id="StartBtnLandingPage" onclick="StartBtn()">Start
+      ➤</button>
+  </div>
+
+  <img src="../Media/Logo/Logo_3.png" class="Non_Drag_Image" id="LandingPageLogo" onclick="StartBtn()"> </img>
+
+
+  <div id="ControlDivParent" class="Non_Drag_Image">
+
+    <button type="button" class="Button Landing_Page_Directions_Button" id="PrevBtn" onclick="Previous()"> 🢀</button>
+    <button type="button" class="Button Landing_Page_Directions_Button" id="NextBtn" onclick="Next()"> 🢂</button>
+    <!-- 🢀 🢂-->
+
+    <div id="LocationParent" class="Button">
+      <div id="LocationText"> </div>
+      <div class="LandingPageheader2" id="ReachCountText">5,392 <span id="UniqueViewsStaticText"> </span> Unique Views
+        <span id="DailyText">/Daily</span>
+      </div>
+
+      <span id="ColumnTextDiv">
+        <div class="LandingPageheader2 ColumnTextDiv" id="TrafficCongestionText">Traffic Level: <span class="BlueText"
+            id="TrafficLevelValueText">High </span> </div> <br>
+        <div class="LandingPageheader2 ColumnTextDiv" id="BillboardTypeText">Billboard Type: <span class="BlueText"
+            id="BillboardTypeValueText">Digital </span></div>
+      </span>
+    </div>
+    <button type="button" class="Button" id="StartBtnLandingPage" onclick="StartBtn()">Start
+      ➤</button>
+
+  </div>
+
+  </img>
+  <script src="../Scripts/Landing_Page.js"></script>
+  <script src="../Scripts/Landing_Page_Data.js"></script>
+  <script src="../Scripts/Entrance_Animation_On_All_Elements.js"></script>
+  <script src="../Scripts/CSS_Importer.js"></script>
+  <script src="../Scripts/Switch_StyleSheets.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <link rel="stylesheet" href="../StyleSheets/Brand_Kit.css">
+    <link rel="stylesheet" href="../StyleSheets/CSS_Importer.css"> -->
+    <!-- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Include flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
+    <!-- Include flatpickr JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- -->
+    <!-- <link rel="icon" type="image/x-icon" href="../Media/Ico/Billboard_Outined.ico"> -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../Media/Ico/white_billboard.ico"
+    />
+
+    <!-- <link rel="icon" type="image/x-icon" href="../Media/Ico/billboard.ico"> -->
+
+    <!-- <link rel="icon" type="image/x-icon" href="../Media/Ico/Explosion_Emoji.ico"> -->
+    <!-- <link rel="icon" type="image/x-icon" href="../Media/Ico/Pink_Square.ico"> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v1.1.1/maptiler-sdk.umd.js"></script>
+    <link
+      href="https://cdn.maptiler.com/maptiler-sdk-js/v1.1.1/maptiler-sdk.css"
+      rel="stylesheet"
+    />
+    <!-- Billboard Ad Manager -->
+    <script src="/reload/reload.js"></script>
+
+    <title>BAM - Billboard Ad Manager</title>
+  </head>
+
+  <body>
+    <div id="Top_Bar">
+      <div class="Top_Bar_First_Section">
+        <div class="Logo_Container">
+  <img
+    src="/Media/Logo/Logo_3.png"
+    alt="BAM Logo"
+    class="Non_Drag_Image Map_Logo_Image"
+    onclick="Redirect_To_LandingPage()"
+  />
+  <div id="Logo_Text">Billboard Ad Manager</div>
+</div>
+        <div id="Parent_Hidden_Billboard_Information_Text">
+          <div id="HBI_Name"></div>
+          <!-- <br> -->
+          <div id="HBI_Price"></div>
+        </div>
+
+        <div id="Voice_Control_Parent">
+          <!-- <button id='Start_Speaking_Btn' onclick="Start_Speaking()">Start</button>
+                <button id='Stop_Speaking_Btn' onclick="Stop_Speaking()">Stop</button>
+                <br><br> -->
+
+          <span id="message"></span>
+        </div>
+
+        <!-- <div class="Browse_Areas_Button Button" id="Hide_Billboard_Information_Btn" onclick="Hide_Billboard_Information()"> -->
+      </div>
+      <!-- END Top_Bar First Section-->
+
+      <div class="Top_Bar_Second_Section">
+        <div class="Stack_Items_On_Top_Of_Each_Other">
+          <div class="Parent_Billboard_Type">
+            <div class="Top_Bar_Title">Filter By Type</div>
+            <div
+              class="Billboard_Type Button Billboard_Type_Not_Selected"
+              id="Billboard_Type_Digital"
+              onclick="Filter_Marker_By_Type('Digital')"
+            >
+              Digital
+            </div>
+            <div
+              class="Billboard_Type Button Billboard_Type_Not_Selected"
+              id="Billboard_Type_Print"
+              onclick="Filter_Marker_By_Type('Print')"
+            >
+              Print
+            </div>
+            <div
+              class="Billboard_Type Button Billboard_Type_Not_Selected"
+              id="Billboard_Type_Both"
+              onclick="Filter_Marker_By_Type('Both')"
+            >
+              Both
+            </div>
+          </div>
+
+                <div class="Parent_Filter_By_Price">
+                    <div class="Filter_By_Price_Text Top_Bar_Title">Filter By Price <span
+                            id="Filter_By_Price_Label_Text">(XCG/Month)</span></div>
+                    <!-- <span id="Prices_Are_In_Antillean_Guilder">ALL Prices are in Antillen Guilder</span> -->
+                    <div class="Parent_Search_Input">
+                        <input type="number" step="40" class="Filter_By_Price_Input" id="Filter_By_Price_Min"
+                            name="Filter_By_Price_Minimum"  tabindex="1">
+
+                        <input type="number" step="40" class="Filter_By_Price_Input" id="Filter_By_Price_Max"
+                            name="Filter_By_Price_Maximum" tabindex="2">
+
+                        <img src="../Media/Ico/search.png" id="Filter_By_Price_Btn" alt="Search"
+                            class="Hide_Billboard_Information_Image Button Action_Button" onclick="Filter_By_Price()"
+                            title="Search" tabindex="3" />
+
+
+                    </div>
+
+            <!-- <div class="Filter_By_Price_Btn Button" id="Filter_By_Price_Btn" onclick="Filter_By_Price()"
+                        tabindex="3">Search
+                    </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- END Top_Bar Second Section-->
+
+      <div class="Top_Bar_Third_Section">
+        <div class="Parent_Browse_Areas">
+          <div class="Parent_Browse_Areas_Title_And_Counter">
+            <div class="Browse_Areas_Title">Browse Areas</div>
+            <div class="Browse_Area_Counter_Display"></div>
+          </div>
+          <div class="Button_In_2_Column">
+            <div
+              class="Browse_Areas_Button Button"
+              id="Browse_Areas_Button_Left"
+              onclick="Browse_Areas('Left')"
+            >
+              🢀
+            </div>
+            <div
+              class="Browse_Areas_Button Button"
+              id="Browse_Areas_Button_Right"
+              onclick="Browse_Areas('Right')"
+            >
+              🢂
+            </div>
+          </div>
+        </div>
+
+        <div class="Parent_Action_Button">
+          <img
+            src="../Media/Ico/Eye_Open.png"
+            id="Hide_Billboard_Information_Image"
+            alt="Hide_Billboard_Information"
+            class="Hide_Billboard_Information_Image Action_Button Button"
+            onclick="Hide_Billboard_Information()"
+            title="Hide / Show Billboard Information"
+          />
+
+          <img
+            src="../Media/Ico/Ask_A_Question.png"
+            id="Ask_A_Question_Img"
+            alt="Ask a Question"
+            class="Hide_Billboard_Information_Image Action_Button Button"
+            onclick="Ask_A_Question()"
+            title="Need support? Ask away."
+          />
+
+          <img
+            src="../Media/Ico/trash-can.png"
+            id="Clear_Campaign_Img"
+            alt="Clear_Campaign"
+            class="Hide_Billboard_Information_Image Action_Button Button"
+            onclick="Confirm_Clear_Campaign()"
+            title="Clear Campaign"
+          />
+
+          <img
+            src="../Media/Ico/Curacao_Outline.png"
+            id="Filter_By_Price_Btn"
+            alt="View Entirety of Curacao"
+            class="Hide_Billboard_Information_Image Action_Button Button"
+            onclick="View_Entirety_Of_Curacao()"
+            title="View Entirety Of Curacao"
+          />
+
+          <img
+            src="../Media/Ico/Scroll_To_Top.png"
+            id="Scroll_To_Top_Action_Btn"
+            alt="Scroll To Top"
+            class="Hide_Billboard_Information_Image Action_Button Button"
+            onclick="Scroll_Billboard_And_Campaign_To_Top()"
+            title="Scroll To Top"
+          />
+
+          <img
+            src="../Media/Ico/catalog_1.png"
+            id="Catalog_Btn"
+            alt="View Catalog"
+            class="Hide_Billboard_Information_Image Action_Button Button"
+            onclick="Open_Catalog()"
+            title="View Catalog"
+          />
+
+          <img
+            src="../Media/Ico/chatgpt.png"
+            id="Catalog_Btn"
+            alt="View Catalog"
+            class="Hide_Billboard_Information_Image Action_Button Button"
+            onclick="Start_Speaking()"
+            title="Use AI Voice Recognition"
+          />
+
+          <!-- <img src="../Media/Ico/scroll-arrows.png" id="Navigate_Map_With_Keys" alt="Navigate_Map_With_Keys"
+                class="Hide_Billboard_Information_Image Action_Button Button" onclick="Navigate_Map_With_Keys()"
+                title="Navigate map with up, down, left, right keys" /> -->
+        </div>
+      </div>
+      <!-- END Top_Bar Third Section-->
+
+      <div class="Top_Bar_Fourth_Section">
+        <!-- stepper-item - Inprogress,completed,(empty) -->
+        <div class="Parent_Step_Progress_Bar">
+          <div class="stepper-wrapper">
+            <div class="stepper-item InProgress" id="Stepper_Item_1">
+              <div class="step-counter" id="step_counter_1">1</div>
+              <div class="step-name" id="step_name_1">Select Billboards</div>
+            </div>
+            <div class="stepper-item" id="Stepper_Item_2">
+              <div class="step-counter" id="step_counter_2">2</div>
+              <div class="step-name">Set Duration</div>
+            </div>
+            <!-- <div class="stepper-item" id="Stepper_Item_3">
+                        <div class="step-counter" id="step_counter_3">3</div>
+                        <div class="step-name">Preview Media </div>
+                    </div> -->
+            <div class="stepper-item" id="Stepper_Item_3">
+              <div class="step-counter" id="step_counter_3">3</div>
+              <div class="step-name">Get Quotation</div>
+            </div>
+          </div>
+          <div class="Parent_Step_Progress_Buttons_LR_And_Tabs">
+            <div class="Parent_Step_Progress_Buttons_LR">
+              <div
+                class="Button Step_Progress_Buttons_LR"
+                id="Step_Progress_Button_Left"
+                onclick="Step_Progress_Button('Left')"
+              >
+                🢀
+              </div>
+              <div
+                class="Button Step_Progress_Buttons_LR"
+                id="Step_Progress_Button_Right"
+                onclick="Step_Progress_Button('Right')"
+              >
+                🢂
+              </div>
+            </div>
+
+            <div class="tab Button Parent_Tabs_Button">
+              <button
+                class="tablinks"
+                onclick="Open_Tab(event,'Tab_1')"
+                id="Opens_On_Default"
+              >
+                Billboard <br />Information
+              </button>
+              <button
+                class="tablinks"
+                onclick="Open_Tab(event,'Tab_2')"
+                id="Tab_Campaign"
+              >
+                Campaign
+              </button>
+              <!-- <button class="tablinks" onclick="Open_Tab(event, 'Tokyo')">Tokyo</button> -->
+            </div>
+          </div>
+        </div>
+        <!--⮜ ⮞-->
+      </div>
+      <!-- END Top_Bar_Fourth_Section -->
+    </div>
+
+    <div
+      class="Set_Campaign_Duration_Parent Appear_Above_Extra_Black_Translucent_Background"
+    >
+      <div class="slidecontainer">
+        <p class="Set_Campaign_Duration_Text Preview_Media_Header">
+          Set Campaign Duration in Months:
+          <span
+            id="Campaign_Duration_Content"
+            class="Preview_Media_Header"
+          ></span>
+        </p>
+        <input
+          type="range"
+          min="6"
+          max="12"
+          value=""
+          class="slider"
+          id="Set_Campaign_Duration"
+        />
+        <p class="Set_Campaign_Duration_Text">
+          Note: Certain billboards have a minimum monthly rental period.<span
+          ></span>
+        </p>
+      </div>
+      <p class="Set_Campaign_Duration_Text Set_Campaign_Desired_Start_Date">
+        Set Desired Campaign Start Date:
+      </p>
+      <input
+        type="text"
+        id="Desired_Campaign_Start_Date"
+        name="trip-start"
+        placeholder="Select Date"
+      />
+
+      <!-- <input type="date" id="Desired_Campaign_Start_Date" name="trip-start" /> -->
+      <div class="Campaign_Next_Cancel_Button_Container">
+        <div
+          class="Button Generic_Campaign_Button_Class"
+          id="Cancel_Set_Campaign_Duration_Btn"
+          onclick="Cancel_Set_Campaign_Duration()"
+        >
+          Cancel
+        </div>
+        <div
+          class="Button Generic_Campaign_Button_Class"
+          id="Campaign_Next"
+          onclick="Step_Progress_Button('Right')"
+        >
+          Next
+        </div>
+      </div>
+      <!-- <div class=" Button" class="Generic_Campaign_Button_Class" id="Set_Campaign_Duration_Btn" onclick="Set_Campaign_Duration_Submit()">Next</div> -->
+    </div>
+
+    <!-- Start Preview Media -->
+    <div
+      class="Parent_Preview_Media Appear_Above_Extra_Black_Translucent_Background"
+    ></div>
+    <!-- End Preview Media -->
+
+    <div
+      class="Parent_Get_Quote Appear_Above_Extra_Black_Translucent_Background"
+    >
+      <div
+        class="Button Get_Quote_Buttons"
+        id="Download_Quote_Btn"
+        onclick="Init_For_PDF()"
+      >
+        <img class="Get_Quote_Img" src="../Media/Ico/PDF.png" /> <br />Download
+        Estimation Quote
+      </div>
+      <div class="Stack_Items_On_Top_Of_Each_Other">
+        <div
+          class="Button Get_Quote_Buttons"
+          id="Send_Email_To_Billboard_Owner"
+          onclick="Send_Email_To_Billboard_Owner()"
+        >
+          <img class="Get_Quote_Img" src="../Media/Ico/Email.png" /><br />
+          Request Official Quote from Billboard Owner
+        </div>
+        <div id="Email_Example_Title">Email Example</div>
+        <img
+          class="Email_Example_Image"
+          src="../Media/Other/Email_Example.png"
+        />
+        <div
+          class="Button Get_Quote_Buttons"
+          id="Get_Quote_Continue_Btn"
+          onclick="Step_Progress_Button('Right')"
+        >
+          Continue
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="Parent_Array_Is_Empty Appear_Above_Extra_Black_Translucent_Background"
+    >
+      <p id="Array_Is_Empty_Text">
+        Atleast 1 billboard should be added to your campaign.
+      </p>
+    </div>
+
+    <div
+      class="Parent_Final_Step_Message Appear_Above_Extra_Black_Translucent_Background"
+    >
+      <p>You've completed every step. Returning you to the HomePage.</p>
+
+      <div class="lds-default">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div id="map"></div>
+
+    <div id="Parent_Voice_Commands" class="Button">
+      <div class="Top_Bar_Voice_Command">
+        <div id="Header_Voice_Commands">Voice Commands</div>
+        <img
+          src="../Media/Ico/close.png"
+          id="Close_Btn_Voice_Command"
+          class="Action_Button"
+        />
+      </div>
+      <div
+        id="Content_Voice_Commands"
+        class="Class_Content_Voice_Commands"
+      ></div>
+    </div>
+
+    <div
+      class="Parent_Confirm_Clear_Campaign Appear_Above_Extra_Black_Translucent_Background"
+    >
+      <p id="Confirm_Clear_Campaign_Text">
+        Are you sure you want to clear your campaign list?
+      </p>
+
+      <div class="Button_In_2_Column" id="Parent_Clear_Campaign_Buttons">
+        <div
+          class="Browse_Areas_Button Button"
+          id="Clear_Campaign_Yes_Btn"
+          onclick="Clear_Campaign()"
+        >
+          Yes
+        </div>
+        <div
+          class="Browse_Areas_Button Button"
+          id="Clear_Campaign_No_Btn"
+          onclick="Confirm_Clear_Campaign('No')"
+        >
+          No
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="Parent_Ask_A_Question Appear_Above_Extra_Black_Translucent_Background"
+    >
+      <p id="Ask_A_Question_Title_Text">Need Support? Ask Away.</p>
+      <p id="Ask_A_Question_Title_Text_Sub">An email will be sent, and we will get back to you promptly.</p>
+      <div class="Button_In_2_Column">
+        <textarea
+          id="Ask_A_Question_Email_Body"
+          name="w3review"
+          rows="10"
+          cols="50"
+          placeholder="Write your message here"
+        ></textarea>
+
+        <div class="Button_In_2_Column" id="Parent_Ask_A_Question_Buttons">
+          <div
+            class="Browse_Areas_Button Button"
+            id="Send_Email_Ask_A_Question_Btn"
+            onclick="Send_Email_Ask_A_Question()"
+          >
+            Send Email
+          </div>
+          <div
+            class="Browse_Areas_Button Button"
+            id="Cancel_Ask_A_Question_Bt"
+            onclick="Ask_A_Question('No')"
+          >
+            Cancel
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Parent_Billboard_Info"></div>
+
+    <!-- <img src="/Media/Ico/BAM_Logo_ICO.ico" class="Non_Drag_Image" id="Logo_On_Map" alt=""> -->
+
+    <div class="Parent_Full_Card_Billboard_Info">
+      <div id="Tab_1" class="Full_Card_Billboard_Info tabcontent">
+        <span id="Insert_Billboard_Card"></span>
+        <p id="Billboard_Information_Basic_Text"></p>
+        <img
+          id="Small_Marker_Billboard_Information"
+          src="../Media/Marker/Default_Marker.png"
+        />
+        <img
+          src="../Media/Ico/Scroll_To_Top.png"
+          id="Scroll_To_Top_Btn"
+          alt="Scroll To Top"
+          class="Hide_Billboard_Information_Image Action_Button Button Hide"
+          onclick="Scroll_Billboard_And_Campaign_To_Top()"
+          title="Scroll To Top"
+        />
+      </div>
+
+      <div
+        id="Tab_2"
+        class="Full_Card_Billboard_Info tabcontent"
+        style="display: none"
+      >
+        <span id="Insert_Selected_Campaign_Billboard_Card"></span>
+        <p id="Campaign_Is_Empty_Text"></p>
+        <img
+          src="../Media/Ico/Scroll_To_Top.png"
+          id="Scroll_To_Top_Btn"
+          alt="Scroll To Top"
+          class="Hide_Billboard_Information_Image Action_Button Button Hide"
+          onclick="Scroll_Billboard_And_Campaign_To_Top()"
+          title="Scroll To Top"
+        />
+      </div>
+    </div>
+    <!-- END Parent_Full_Card_Billboard_Info-->
+
+    <div
+      class="Black_Translucent_Background"
+      id="Black_Translucent_Background"
+    ></div>
+    <div
+      class="Extra_Black_Translucent_Background Black_Translucent_Background"
+      id="Extra_Black_Translucent_Background"
+    ></div>
+
+    <div id="Insert_Maximized_Slideshow"></div>
+    <div id="Dev_Marker_Clicked_Info"></div>
+
+    <script src="../Scripts/Map_Data.js"></script>
+    <script src="../Scripts/Billboard_Owner_Data.js"></script>
+    <script src="../Scripts/General_Script.js"></script>
+    <script src="../Scripts/Map.js"></script>
+    <script src="../Scripts/CSS_Importer.js"></script>
+    <script src="../Scripts/Switch_StyleSheets.js"></script>
+    <script src="../Scripts/Add_To_Campaign.js"></script>
+    <script src="../Scripts/Clear_Campaign.js"></script>
+    <script src="../Scripts/Step_Progress_Bar.js"></script>
+    <script src="../Scripts/Browse_Areas.js"></script>
+    <script src="../Scripts/Filter_By_Price.js"></script>
+    <script src="../Scripts/Filter_By_Type.js"></script>
+    <script src="../Scripts/Marker_Clicked.js"></script>
+
+    <script src="../Scripts/Billboard_Slideshow.js"></script>
+    <script src="../Scripts/Maximize_Slideshow.js"></script>
+    <script src="../Scripts/Hide_Billboard_Information.js"></script>
+    <script src="../Scripts/Billboard_Info_Tabs.js"></script>
+    <script src="../Scripts/Set_Campaign_Duration.js"></script>
+    <script src="../Scripts/Preview_Media.js"></script>
+    <script src="../Scripts/Entrance_Animation_On_All_Elements.js"></script>
+    <script src="../Scripts/Ask_A_Question.js"></script>
+    <script src="../Scripts/Create_PDF.js"></script>
+    <script src="../Scripts/Send_Email.js"></script>
+    <script src="../Scripts/PDF_Doc_Definition.js"></script>
+    <script src="../Scripts/BAM_Logo_URL.js"></script>
+    <script src="../Scripts/BAM_Logo_Transparent_URL .js"></script>
+    <script src="../Scripts/Init_Email_Data.js"></script>
+    <script src="../Scripts/Send_Email_To_Billboard_Owner.js"></script>
+    <script src="../Scripts/View_Entirety_Of_Curacao.js"></script>
+    <script src="../Scripts/Ask_A_Question.js"></script>
+    <script src="../Scripts/Voice_Control.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/vfs_fonts.js"></script>
+    <script src="../Scripts/Jquery_3_7_1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+.tab {
+    overflow: hidden;
+    /* border: 400px solid #ccc; */
+    background-color: var(--first-color) !important;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: max-content;
+}
+
+.tablinks {
+    /* background-color: inherit; */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    /* transition: 0.7s; */
+    padding: 5px 11px 11px 5px;
+    /* padding: 5% 5% 5% 5%; */
+    font-size: 20px;
+    font-family: inherit;
+    flex-grow: 1;
+    background-color: var(--fourth-color);
+    height: 50px;
+}
+
+#Tab_Campaign {
+    border-radius: 0 5px 5px 0;
+  
+}
+
+.tablinks:not(:last-child) {
+    border-right: 1px solid #ccc;
+}
+
+.tablinks:hover {
+background-color: var(--third-color);
+}
+
+.tablinks.active {
+    background-color: var(--first-color);
+    color: var(--fourth-color);
+   
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    position: absolute;
+}
+
+#Opens_On_Default {
+    border-right: 2px black solid;
+    border-radius: 5px 0 0 5px;
+}
+
+.Parent_Tabs_Button {
+    display: inline-flex;
+    /* margin-left: 9%;  */
+
+}
+
+
+/**/
+.attention_grabber {
+    animation: attention 0.5s infinite linear;
+    /* Animation for attention-grabbing effect */
+    border-width: 10px;
+    border-style: solid;
+}
+
+@keyframes attention {
+    0% {
+        border-color: var(--third-color);
+        /* Starting color */
+        transform: scale(1);
+        /* Initial scale */
+    }
+
+    50% {
+        border-color: var(--sixth-color);
+        /* Midway color */
+        transform: scale(1.1);
+        /* Scale up slightly */
+    }
+
+    100% {
+        border-color: var(--third-color);
+        /* Ending color */
+        transform: scale(1);
+        /* Return to initial scale */
+    }
+}

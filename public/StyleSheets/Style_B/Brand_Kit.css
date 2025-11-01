@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'TTNormsMedium';
+    src: url('/StyleSheets/Fonts/TTNorms-Medium.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    --first-color: rgb(255, 105, 180);
+    /* HotPink */
+    --second-color: #c227bd;
+    --third-color: rgb(255, 27, 141);
+
+
+    --fourth-color: white;
+    --fifth-color: black;
+    /* --sixth-color: rgb(129, 102, 118); */
+    --sixth-color: white;
+    /* Used for selection and Button Hover */
+    --seventh-color: rgb(255, 151, 201);
+    --Top_Bar_And_Billboard_Information_Background_Color: rgb(218, 225, 255);
+    /* --Top_Bar_And_Billboard_Information_Background_Color: rgb(205, 205, 205); */
+    --Top_Bar_And_Billboard_Information_Background_Color_2: rgba(205, 205, 205, 0.877);
+    /* --Top_Bar_And_Billboard_Information_Background_Color:   #fcc67f; */
+    --Step_Progress_Bar_Bar_Color: ();
+
+
+    font-family: 'TTNormsMedium';
+    /* font-family: "../StyleSheets/Fonts/TTNorms-Medium.otf"; */
+    font-weight: normal;
+    font-style: normal;
+    overflow: hidden;
+    /* cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="HotPink" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="8" fill="white"/><circle cx="12" cy="12" r="6" fill="HotPink"/></svg>'), auto; */
+}
+
+
+
+/* Sandbox */
+
+body {
+    --first-color: #F87954;
+    --third-color: #FFBD59;
+    --seventh-color: #FFEAD2;
+}
+
+body {
+    --first-color: #3CC4C2;
+    --third-color: #3B82C4;
+    --seventh-color: #3BC47D;
+}
+
+body {
+    --first-color: rgb(35, 112, 255);
+    --third-color: #00c3ff;
+    /* --seventh-color: rgb(56, 169, 226); */
+    --seventh-color: rgb(145, 218, 255);
+
+}
+
+
+
+
+
+/*   */
+
+::selection {
+    background: var(--seventh-color);
+    /* WebKit/Blink Browsers */
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#Logo_On_Map {
+    position: absolute;
+}
+
+.Non_Drag_Image {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+
+.Button {
+    border-radius: 5px;
+    background-color: var(--fourth-color);
+    font-size: 1.8em;
+    margin: 4px 0;
+    margin-right: 10px;
+    border: 1px solid black;
+    padding: 5px;   
+    transition: all 0.1s ease-in-out;
+}
+
+.Button:hover {
+    background-color: var(--seventh-color);
+    outline: 2px solid var(--third-color);
+  
+}
+
+.Hide {
+    display: none;
+    visibility: hidden;
+}
+
+
+.maplibregl-ctrl-icon {
+    /* background: var(--first-color); */
+    outline: black solid 2px;
+    color: white;
+    border-radius: 5px;
+}
+
+
+.maplibregl-ctrl-top-left {
+    margin-top: 37%;
+    /* Was 40 */
+}
+
+/*
+.maplibregl-ctrl-icon {
+    background-color: rgba(175, 122, 122, 0) !important;
+}
+
+.maplibregl-ctrl-zoom-out,
+.maplibregl-ctrl-zoom-in,
+.maplibregl-ctrl-compass,
+.maplibregl-ctrl-geolocate {
+    background-color: var(--first-color) !important;
+    border-radius: 8px !important;
+    border: 2px black solid !important;
+}
+
+.maplibregl-ctrl,
+.maplibregl-ctrl-group {
+    background-color: transparent !important;
+}
+
+.maplibregl-ctrl-group {
+    background: rgba(0, 0, 0, 0) !important;
+    border-radius: 4px;
+}
+
+*/
+
+
+/* .maplibregl-ctrl-icon:hover{
+    background-color: var(--second-color);
+    -webkit-tap-highlight-color: transparent;
+
+ } */
+
+
+.My_Hidden_Class {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+.Appear_Above_Extra_Black_Translucent_Background {
+    z-index: 999;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+/* #Clear_Campaign_Yes_Btn,
+#Clear_Campaign_No_Btn {
+    color: black;
+} */

@@ -1,0 +1,33 @@
+.ticker {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+}
+
+.Billboard_Description_Background {
+    /* width: 59.3%; */
+    width: 59.3%;
+    background: var(--fourth-color);
+    overflow: hidden;
+    position: absolute;
+    /* left: 20.5%; */
+    left: 20.2%;
+    right: 20%;
+    top: 10%;
+    transform: translateY(-90%);
+    border: 2px black solid;
+    height: 80px;
+}
+
+.title h5 {
+    font-size: 18px;
+    margin: 8% 0;
+}
+
+.Billboard_Description_Background marquee {
+    font-size: 18px;
+    width: 100%;
+}

@@ -1,0 +1,126 @@
+function Execute_PDF_Doc_Definition() {
+    // For no no borders in table, add "  layout: "noBorders",  " 
+    // ontop of 3 (all) instances of table:{
+    // Header
+    var docDefinition = {
+        content: [
+            {
+                image: BAM_Logo_Transparent_URL,
+                width: 150
+            },
+            { text: "Billboard Quotation", style: "header1" },
+            {
+                table: {
+                    widths: ['*', '*'],
+                    body: [
+                        [
+                            { text: "Desired Campaign Start Date", style: "FirstColumn" },
+                            { text: Desired_Campaign_Start_Date }
+                        ],
+                        [
+                            { text: "Campaign Duration (Months)", style: "FirstColumn" },
+                            { text: Campaign_Duration }
+                        ]
+                    ]
+                }
+            },
+            { text: "All prices and information were gathered through contacting the billboard owner. ", style: 'header3' },
+            { text: "All prices are subject to change by billboard owner, hence why this quote is regarded as unofficial. ", style: 'header3' },
+            " "
+        ]
+    };
+
+    // Billboard Information
+    docDefinition.content.push({ text: "Billboard Information", style: 'header2' });
+
+    Arr_Campaign_Only_Marker_ID.forEach(item => {
+        var currentItem = Map_Data.find(i => i.properties.Marker_ID === item);
+        log("Current Item:" + currentItem);
+
+        docDefinition.content.push(
+            {
+                table: {
+                    widths: ['*', '*'],
+                    body: [
+                        [{ text: 'Location', style: 'FirstColumn' }, { text: currentItem?.properties.Billboard_Location }],
+                        [{ text: 'Price Per Month (XCG)', style: 'FirstColumn' }, { text: currentItem?.properties.Price_Per_Month_1 }],
+                        [{ text: 'Price Description', style: 'FirstColumn' }, { text: currentItem?.properties.PPM_1_Description }],
+                        // [{ text: 'Billboard Owner', style: 'FirstColumn' }, { text: Billboard_Owner_Data[0]["Company_Name"] }],
+                        // [{ text: 'Billboard Owner', style: 'FirstColumn' }, { text: currentItem?.properties.Owner_ID }],
+                        [{ text: 'Billboard Owner', style: 'FirstColumn' }, { text: Find_CompanyName_By_OwnerID(currentItem?.properties.Owner_ID) }],
+                        [{ text: 'Billboard Type', style: 'FirstColumn' }, { text: currentItem?.properties.Billboard_Type }],
+                        [{ text: 'View Density', style: 'FirstColumn' }, { text: currentItem?.properties.View_Density }],
+                        [{ text: 'Minimum Rental Period', style: 'FirstColumn' }, { text: currentItem?.properties.Minimum_Rental_Period }],
+                        [{ text: 'Night Time Illumination', style: 'FirstColumn' }, { text: currentItem?.properties.Night_Time_Illumination }],
+                        [{ text: 'Additional Information', style: 'FirstColumn' }, { text: currentItem?.properties.Description }]
+                    ]
+                }
+            },
+            " ", " " // Empty row
+        );
+    });
+
+    // Billboard Owner
+    // docDefinition.content.push({ text: '', pageBreak: 'after' });
+    docDefinition.content.push({ text: "Billboard Owner", style: 'header2' });
+    Arr_Unique_Owner_ID.forEach(item => {
+        var ownerData = Billboard_Owner_Data.find(owner => owner.Owner_ID == item);
+        var currentItem_A = window.Map_Data.find(i => i.properties.Owner_ID === item);
+
+        docDefinition.content.push(
+            {
+                table: {
+                    widths: ['*', '*'],
+                    body: [
+                        [{ text: 'Billboard Owner', style: 'FirstColumn' }, { text: ownerData?.Company_Name || 'N/A' }],
+                        [{ text: 'Owner Name', style: 'FirstColumn' }, { text: ownerData?.Owner_Name || 'N/A' }],
+                        [{ text: 'Phone Number', style: 'FirstColumn' }, { text: ownerData?.PhoneNr || 'N/A' }],
+                        [{ text: 'Whatsapp', style: 'FirstColumn' }, { text: ownerData?.WhatsappNr || 'N/A' }],
+                        [{ text: 'Email', style: 'FirstColumn' }, { text: ownerData?.Email || 'N/A' }],
+                        [{ text: 'Website', style: 'FirstColumn' }, { text: ownerData?.Website || 'N/A' }]
+
+
+                    ]
+                }
+            },
+            " ", " " // Empty row
+        );
+    });
+
+    log("docDefinition:");
+    log(docDefinition);
+
+    docDefinition.styles = {
+        header1: {
+            fontSize: 30,
+            bold: true
+        },
+        header2: {
+            fontSize: 19,
+            bold: true
+        },
+        header3: {
+            fontSize: 11,
+            bold: false
+        },
+        header4: {
+            fontSize: 16,
+            bold: false
+        },
+        FirstColumn: {
+            bold: true
+        }
+    };
+
+    var fonts = {
+        Roboto: {
+            normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
+            bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
+            italics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
+            bolditalics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf'
+        }
+    };
+
+    window.fonts = fonts;
+    window.docDefinition = docDefinition;
+}

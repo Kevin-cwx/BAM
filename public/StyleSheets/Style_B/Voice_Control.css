@@ -1,0 +1,27 @@
+#Parent_Voice_Commands {
+  position: absolute;
+  z-index: 999;
+  background-color: var(--Top_Bar_And_Billboard_Information_Background_Color);
+  border: 1px solid black;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#Header_Voice_Commands {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: var(--first-color);
+  color: var(--fourth-color);
+}
+
+.Class_Content_Voice_Commands {
+  padding: 10px;
+  text-align: left;
+}
+
+.Top_Bar_Voice_Command{
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+}

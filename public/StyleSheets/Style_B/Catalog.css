@@ -1,0 +1,40 @@
+.Parent_Catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .Parent_Catalog_Card {
+    margin-top: 10px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .Catalog_Image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .Parent_Information_Text {
+    padding: 16px;
+  }
+  
+  .Catalog_Billboard_Location_Content {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .Catalog_Billboard_Price {
+    font-size: 16px;
+    color: #666;
+  }
+
+  #Catalog_Full_Page_Body{
+    background-color: var(--Top_Bar_And_Billboard_Information_Background_Color);
+  }

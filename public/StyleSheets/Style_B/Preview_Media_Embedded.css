@@ -1,0 +1,52 @@
+.Parent_Preview_Media {
+    z-index: 1001;
+}
+
+.Parent_Container_Direct_Media {
+    /* border: 3px red solid; */
+    height: 500px;
+    margin-top: 37%;
+    margin-left: 50%;
+    width: 100%;
+}
+
+.Parent_Container_Upload_Media{
+    height: 700px;
+    margin-top: 100%;
+    margin-left: 50%;
+    width: 100%;    
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.Preview_Edited_Advertisement_Image {
+    max-width: 318px;
+    padding: 10px;
+}
+
+#Skip_Preview_Media {
+    width: fit-content;
+    margin-left: 34px;
+}
+
+.Preview_Media_Header {
+    color: white;
+    font-size: 80px;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+#Advertisement_Image{
+    height: 0.1px;
+}
+
+#resultContainer{
+    /* display: grid; 
+    grid-template-columns: repeat(4, 1fr); */
+    width: 100%;
+}
+
+.billboard-container canvas{
+    display: inline-block;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="https://fontlibrary.org//face/tt-norms-medium" type="text/css"> -->
+    <link rel="stylesheet" href="../StyleSheets/CSS_Importer.css">
+    <link rel="stylesheet" href="../StyleSheets/Brand_Kit.css">
+    <link rel="stylesheet" href="../StyleSheets/Preview_Media.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="../Media/Ico/Explosion_Emoji.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v1.1.1/maptiler-sdk.umd.js"></script>
+    <link href="https://cdn.maptiler.com/maptiler-sdk-js/v1.1.1/maptiler-sdk.css" rel="stylesheet" />
+    <!-- Billboard Ad Manager -->
+    <title> BAM </title>
+</head>
+
+<body>
+
+    <div class="Parent_Preview_Media"> 
+    <div class="Parent_Container_Direct_Media"></div>
+
+
+
+
+    <div class="Parent_Container_Upload_Media">
+        <h1>Upload Advertisement Image</h1>
+        <div class="Button" id="Skip_Preview_Media" onclick="Skip_Preview_Media()">Skip this step</div>
+
+        <input type="file" id="imageInput" accept="image/*">
+        <button onclick="processImages()">Process Images</button>
+
+
+        <div>
+            <h2>Billboard Image</h2>
+            <img id="billboardImage" src="../Media/Billboard_Images/Preview_Media/Empty_Billboard_Images/1.jpg"
+                alt="Billboard Image">
+        </div>
+
+        <div>
+            <h2>Advertisement Image</h2>
+            <img id="Advertisement_Image" alt="Ad Image">
+        </div>
+
+        <div>
+            <h2>Preview Media</h2>
+            <!-- <canvas id="resultCanvas" width="500" height="500"></canvas> -->
+            <div id="resultContainer" style="display: flex; flex-wrap: wrap;"></div>
+
+        </div>
+
+
+    </div>
+    </div>
+    
+    <script src="../Scripts/Main_Script.js"></script>
+    <script src="../Scripts/Preview_Media.js"></script>
+    <script src="../Scripts/Step_Progress_Bar.js"></script>
+
+
+
+
+</body>
+
+</html>

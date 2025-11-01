@@ -1,0 +1,33 @@
+.mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+/* #Parent_Billboard_Info{
+    z-index: 2;
+    position: absolute;
+    background: white;
+    padding: 10px;
+    font-size: 40px;
+    
+    left: 0;
+    bottom: 0;
+} */
+
+#Dev_Marker_Clicked_Info{
+    position:absolute;
+    bottom:0;
+    left:0;
+    background: white;
+    font-size: 40px;
+    z-index: 40;
+}
+
+.Parent_Large_Slideshow{
+    background: white;
+    font-size: 40px;
+    z-index: 2;
+
+    position:absolute;
+    bottom:0;
+}

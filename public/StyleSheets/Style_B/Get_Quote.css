@@ -1,0 +1,36 @@
+.Parent_Get_Quote {
+    top: 65%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.Get_Quote_Buttons {
+    padding: 20px;
+}
+
+.Get_Quote_Img {
+    height: 50px;
+}
+
+.Email_Example_Image {}
+
+#Email_Example_Title {
+    margin-top: 25px;
+    color: white;
+    font-size: 40px;
+}
+
+#Download_Quote_Btn {
+    height: fit-content;
+    margin-right: 30px;
+}
+
+#Send_Email_To_Billboard_Owner {
+    width: fit-content;
+}
+
+#Get_Quote_Continue_Btn {
+    width: fit-content;
+}

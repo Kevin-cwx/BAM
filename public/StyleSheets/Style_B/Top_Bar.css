@@ -1,0 +1,112 @@
+#Top_Bar {
+  background: var(--Top_Bar_And_Billboard_Information_Background_Color);
+  position: relative;
+  /* min-height: 30vh;  */
+  height: 50%;
+  padding: 0px 05px;
+  padding-top: 5px;
+  z-index: 999;
+  overflow: hidden;
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: 1fr 1fr 1fr 3fr;
+  border: 1px solid black;
+  column-gap: 0%;
+  /* border: 3px var(--fifth-color) solid; */
+}
+
+@media screen and (max-width: 1358px) {
+  /* Height for small screens */
+  #Top_Bar {
+    height: 30vh;
+  }
+}
+
+.Top_Bar_Title {
+  /* font-size: 3vh;
+    white-space: nowrap; */
+
+  font-size: 20px;
+  font-weight: 100;
+  padding-bottom: 5px;
+}
+
+.Top_Bar_First_Section {
+  display: inline-block;
+  height: min-content;
+}
+
+.Top_Bar_Second_Section {
+}
+
+.Top_Bar_Third_Section {
+  margin-left: 10%;
+}
+
+.Top_Bar_Fourth_Section {
+  /* width: 150%; */
+  /* width: calc(130% + 40px);
+    margin-left: -20%; */
+}
+
+#Hide_Billboard_Information_Image,
+#Navigate_Map_With_Keys,
+#Ask_A_Question_Img,
+#Scroll_Up_Img,
+#Scroll_To_Top_Action_Btn,
+.Action_Button,
+#Clear_Campaign_Img {
+  height: 30px;
+  padding: 2px;
+  z-index: 9999;
+}
+
+#Scroll_To_Top_Btn {
+  height: 30px;
+  padding: 5px;
+  z-index: 9999;
+}
+
+#Scroll_Up_Img {
+  transform: rotate(180deg);
+}
+
+.Parent_Hide_Billboard_Information {
+  margin: 0;
+  height: 0;
+}
+
+.Map_Logo_Image {
+  height: 13vh;
+  width: auto;
+}
+
+#Logo_Text {
+  font-size: 30.5px;
+  /* width: 10px; */
+  margin-top: 5px;
+  white-space: nowrap;
+}
+
+.Logo_Container {
+  display: inline-flex; /* or flex, depending on layout needs */
+  flex-direction: column; 
+  align-items: left; 
+  margin-right: 20px;
+}
+
+.Stack_Items_On_Top_Of_Each_Other {
+  display: flex;
+  flex-direction: column;
+
+  /* position: absolute;
+  top: 2%; 
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2vh; */
+}
+
+.Parent_Action_Button {
+}

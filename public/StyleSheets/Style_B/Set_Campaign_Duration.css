@@ -1,0 +1,66 @@
+.Set_Campaign_Duration_Parent {
+  top: 65%;
+  left: 50%;
+}
+
+.Set_Campaign_Duration_Text {
+  color: white;
+  font-size: 20px;
+  width: 150vh;
+}
+
+.Set_Campaign_Desired_Start_Date {
+  margin-top: 10px;
+}
+
+.slidecontainer {
+  width: 100%;
+  /* z-index: inherit; */
+  /* position: relative; */
+}
+
+.slider {
+  /* Needed in order to add custom CSS */
+  -webkit-appearance: none;
+  width: 100%;
+  height: 20px;
+  border-radius: 5px;
+  background: var(--fourth-color);
+  outline: none;
+  border: 3px var(--third-color) solid;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  --Slider_Dot_Size: 50px;
+  width: var(--Slider_Dot_Size);
+  height: var(--Slider_Dot_Size);
+  border-radius: 50%;
+  background: var(--first-color);
+  cursor: pointer;
+  border: 2px var(--third-color) solid;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--first-color);
+  cursor: pointer;
+}
+
+.Generic_Campaign_Button_Class {
+  padding: 5px;
+  width: 150px;
+}
+
+#Desired_Campaign_Start_Date {
+  font-size: 40px;
+  font-family: inherit;
+}
+
+.Campaign_Next_Cancel_Button_Container {
+    display: flex;
+    flex-direction: row;
+}

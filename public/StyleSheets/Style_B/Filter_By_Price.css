@@ -1,0 +1,50 @@
+.Filter_By_Price_Input {
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+  width: 43%;
+  font-size: 20px;
+  /* box-sizing: border-box; */
+  margin-right: 6px;
+}
+
+.Filter_By_Price_Input:focus {
+  border-color: var(--first-color);
+  box-shadow: 0 0 5px var(--first-color);
+}
+
+.Filter_By_Price_Input::placeholder {
+      font-size: 16px;
+}
+
+.Parent_Filter_By_Price {
+  margin-top: 2%;
+
+}
+
+.Filter_By_Price_Btn {
+  width: max-content;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.Filter_By_Price_Text {
+}
+
+#Prices_Are_In_Antillean_Guilder {
+  display: inline-block;
+  font-size: small;
+}
+
+.Parent_Search_Input {
+  /* display: flex;
+  align-items: center; */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#Filter_By_Price_Label_Text {
+  font-size: 15px;
+}

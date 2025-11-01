@@ -1,0 +1,113 @@
+.stepper-wrapper {
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    --Step-Progress-Bar-Line-Width: 6px;
+}
+
+.stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
+}
+
+.stepper-item::before {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid white;
+    width: 100%;
+    top: 20px;
+    left: -50%;
+    z-index: 2;
+}
+
+.stepper-item::after {
+    position: absolute;
+    content: "";
+    border-bottom: var(--Step-Progress-Bar-Line-Width) solid var(--fourth-color);
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 2;
+}
+
+.stepper-item .step-counter {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--fourth-color);
+    margin-bottom: 6px;
+    font-size: 25px;
+    color: black;
+}
+
+.stepper-item.active {
+    font-weight: bold;
+}
+
+/* Same CSS as Billboard_Type_Selected */
+.stepper-item.Completed .step-counter {
+    background-color: var(--first-color);
+    border: 4px var(--fourth-color) solid !important;
+    outline: 4px solid var(--third-color);
+}
+
+.stepper-item.Completed::after {
+    position: absolute;
+    content: "";
+    border-bottom: var(--Step-Progress-Bar-Line-Width) solid var(--third-color);
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 3;
+}
+
+.stepper-item.InProgress .step-counter {
+    background-color: var(--first-color);
+    border: 15px var(--fourth-color) solid !important;
+    outline: 4px solid var(--third-color);
+    color: white;
+}
+
+.stepper-item:first-child::before {
+    content: none;
+}
+
+.stepper-item:last-child::after {
+    content: none;
+}
+
+.Parent_Step_Progress_Buttons_LR {
+    /* align-items: center; */
+    margin-top: 5px;
+    display: inline-flex;
+
+    /* margin-left: 50px; */
+}
+
+.Step_Progress_Buttons_LR {
+    width: max-content;
+    font-size: 33px;
+    display: inline-block;
+}
+
+.Parent_Step_Progress_Bar {}
+
+.step-name {
+    font-size: 20px;
+}
+
+.Parent_Step_Progress_Buttons_LR_And_Tabs{
+    margin-left: 5%;
+}

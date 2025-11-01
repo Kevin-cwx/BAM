@@ -1,0 +1,122 @@
+.Background_Image {
+    /* The image used */
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    /* Full height */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+#BackgroundImageID {
+    display: none;
+}
+
+.Background_Video_Container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.Background_Video {
+    min-width: 100%;
+    min-height: 100%;
+
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+    width: auto;
+    height: auto;
+
+    /* Center the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#LandingPageLogo {
+    width: 15rem;
+    position: relative;
+    padding: 10px;
+}
+
+#Map_Logo {
+    width: 13rem;
+    float: right;
+}
+
+#ControlDivParent {
+    /* top: 30%;
+    left: 20%; */
+
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#LocationParent {
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    padding: 10px;
+    width: 800px;
+}
+
+.LandingPageheader2 {
+    font-size: 30px;
+}
+
+.ColumnTextDiv {
+    vertical-align: top;
+    display: inline-block;
+}
+
+#StartBtnLandingPage {
+    width: auto;
+    padding: 0 10px;
+    float: right;
+    font-size: 50px;
+    font-weight: 600;
+    z-index: 99;
+    position: relative;
+}
+
+#Start_Right_Arrow {
+    color: white;
+}
+
+.Landing_Page_Directions_Button {
+    /* color: white; */
+
+}
+
+#TrafficLevelValueText {
+    color: var(--first-color);
+}
+
+.Landing_Page_Large_Text {
+    color: white;
+    font-size: 60px;
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    /* text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black; */
+    background-color: rgba(0, 0, 0, 0.644);
+}
+
+#Landing_Page_Text_Accent{
+    color: var(--third-color);
+    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}

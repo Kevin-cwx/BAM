@@ -1,0 +1,6 @@
+Ctrl + Shift + `
+In terminal: nodemon server.js
+Browser: localhost:7210
+
+update nodemon
+npm install -g nodemon

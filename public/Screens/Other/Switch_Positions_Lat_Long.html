@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="https://fontlibrary.org//face/tt-norms-medium" type="text/css"> -->
+    <link rel="stylesheet" href="../StyleSheets/CSS_Importer.css">
+    <link rel="stylesheet" href="../StyleSheets/Brand_Kit.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="../Media/Ico/Explosion_Emoji.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v1.1.1/maptiler-sdk.umd.js"></script>
+    <link href="https://cdn.maptiler.com/maptiler-sdk-js/v1.1.1/maptiler-sdk.css" rel="stylesheet" />
+    <!-- Billboard Ad Manager -->
+    <title> Switch Lat and Long </title>
+</head>
+
+<body>
+
+    <input type="text" id="input" placeholder="Paste coordinates here">
+    <div id="output"></div>
+  
+
+
+    <script>
+        function switchLatLong(latLong) {
+          return `${latLong.split(', ').reverse().join(',')}`;
+        }
+    
+        async function getClipboardAndSwitch() {
+          try {
+            const clipboardText = await navigator.clipboard.readText();
+            document.getElementById('input').value = clipboardText;
+            const outputLatLong = switchLatLong(clipboardText);
+    
+            // Copy the output to the clipboard
+            await navigator.clipboard.writeText(outputLatLong);
+    
+            // Display the output
+            document.getElementById('output').textContent = `${outputLatLong}`;
+          } catch (err) {
+            console.error('Failed to read clipboard: ', err);
+          }
+        }
+    
+        // Automatically get clipboard and switch coordinates when the page loads
+        window.addEventListener('load', getClipboardAndSwitch);
+      </script>
+<style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 300px;
+      margin-bottom: 20px;
+    }
+    #output {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+    <script src="../Scripts/Jquery_3_7_1.js"> </script>
+
+</body>
+
+</html>

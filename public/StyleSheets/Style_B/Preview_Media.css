@@ -1,0 +1,30 @@
+body {
+    /* overflow-y: auto; */
+    overflow: auto;
+    background-color: #6d1e4c;
+}
+
+.Parent_Preview_Media{
+    z-index: 1001;
+
+}
+
+.Parent_Container_Upload_Media {
+        
+}
+
+.Parent_Container_Direct_Media{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+}
+
+.Preview_Edited_Advertisement_Image{
+    max-width: 400px;
+    padding: 10px;
+}
+
+#Skip_Preview_Media{
+    width: fit-content;
+
+}

@@ -1,0 +1,21 @@
+.Billboard_Type_Not_Selected {
+    background: var(--seventh-color);
+    color: black;
+}
+
+.Billboard_Type_Selected {
+    background: var(--first-color) !important;
+    padding: 3px !important;
+    outline: 3px solid var(--third-color);
+    color: white;
+    /* transition: 0.5s; */
+}
+
+.Billboard_Type {
+    display: inline-block;
+    /* width: 14%; */
+    padding: 2px;
+    text-align: center;
+    background: var(--fourth-color);
+    font-size: 19px !important;
+}

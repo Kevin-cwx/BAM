@@ -1,0 +1,96 @@
+.Parent_Maximized_Slideshow {}
+
+.Maximized_Image_Container {
+    /* position: relative;
+        display: block;
+        height: 200px;
+        /* width: 100%;  
+        z-index: 2; */
+}
+
+
+.Maximized_Image_Class {
+    position: absolute;
+    inset: 0px;
+    z-index: 999;
+    /* max-height: 100%;
+    max-width: 100%; */
+    width: 100%;
+    height: 100%;
+
+}
+
+.Black_Translucent_Background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 998;
+    display: none;
+}
+
+.Extra_Black_Translucent_Background {
+    background: rgba(0, 0, 0, 0.973);
+    /* background: rgba(251, 244, 122, 0.453); */
+}
+
+
+#Close_Slideshow {
+    /*Top: 0;*/
+    top: 0%;
+    margin-top: 0px;
+}
+
+#Video_Preview {
+    /*margin-top: 50px; */
+    top: 20%; 
+    bottom:690px;
+}
+
+.Maximized_Slideshow_Top_Right_Btn {
+    position: fixed;
+    right: 0;
+    cursor: pointer;
+    z-index: 999999999;
+    width: 100px;
+
+    /* mix-blend-mode: hard-light; */
+    /*Deals with X appearing on a dark background */
+    border-radius: 8px;
+    background-color: var(--first-color);
+    padding: 10px;
+    border: 3px solid var(--fifth-color);
+}
+
+.Maximized_left_overlay,
+.Maximized_right_overlay {
+    position: fixed;
+    bottom: 0;
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* background-color: var(--first-color); */
+    text-align: center;
+    cursor: pointer;
+    /* border-radius: 10px; */
+    color: black;
+    z-index: 999;
+    height: 70px;
+    font-size: 300%;
+    border: 3px solid black;
+}
+
+
+.Maximized_left_overlay {
+    left: 0;
+    /* border-top-right-radius: 0;
+    border-bottom-right-radius: 0; */
+
+}
+
+.Maximized_right_overlay {
+    right: 0;
+    /* border-top-left-radius: 0;
+    border-bottom-left-radius: 0; */
+}

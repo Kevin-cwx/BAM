@@ -1,0 +1,65 @@
+    var dd = {
+        content: [
+            { text: "Unofficial Billboard Quotation", style: "header1" },
+            [{ text: 'Date', style: 'FirstColumn' }], //append "Date: " in the Date variable when sending that data
+            { text: "All prices are subject to change by Billboard Owner, hence why this quote is regarded as unofficial. ", style: 'header3' },
+            { text: "All prices and information was gathered through contacting the billboard owner. ", style: 'header3' },
+
+            " ", //Empty row
+            // { canvas: [{ type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1 }] },
+            { text: "Billboard Information", style: 'header2' },
+            {
+                table: {
+                    widths: ['*', '*'],
+
+                    body: [
+                        [{ text: 'Billboard ID', style: 'FirstColumn' }],
+                        [{ text: 'Location', style: 'FirstColumn' }],
+                        [{ text: 'Billboard Type', style: 'FirstColumn' }],
+                        [{ text: 'View Density', style: 'FirstColumn' }],
+                        [{ text: 'Price Per Month (XCG)', style: 'FirstColumn' }],
+                        [{ text: 'Price Description', style: 'FirstColumn' }],
+                        [{ text: 'Minimum Rental Period', style: 'FirstColumn' }],
+                        [{ text: 'Night Time Illumination', style: 'FirstColumn' }],
+                        [{ text: 'Additional Information', style: 'FirstColumn' }]
+
+                    ]
+                }
+            }, " ", //Empty row
+            { text: "Billboard Owner Information", style: 'header2' },
+            {
+                table: {
+                    widths: ['*', '*'],
+
+                    body: [
+                        [{ text: 'Owner', style: 'FirstColumn' }],
+                        [{ text: 'Owner Name', style: 'FirstColumn' }],
+                        [{ text: 'Phone Nr', style: 'FirstColumn' }],
+                        [{ text: 'Whatsapp', style: 'FirstColumn' }],
+                        [{ text: 'Email', style: 'FirstColumn' }],
+                        [{ text: 'Website', style: 'FirstColumn' }]
+
+                    ]
+                }
+            }, " ", //Empty row
+        ],
+        styles: {
+            header1: {
+                fontSize: 30,
+                bold: true
+            },
+            header2: {
+                fontSize: 18,
+                bold: true
+            }
+            ,
+            header3: {
+                fontSize: 11,
+                bold: false
+            },
+            FirstColumn: {
+                bold: true,
+
+            }
+        }
+    }

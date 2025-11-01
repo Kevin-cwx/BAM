@@ -1,0 +1,190 @@
+.Parent_Full_Card_Billboard_Info {
+    /*Adding this removes the close button for maximized image 
+    But its needed to add vertical scroll bar for billboard info section
+    */
+    /* height: 100vh; */
+    height: 100vh;
+    max-height: 100%;
+    overflow-y: auto;
+    margin-right: -16px;
+    --Font_Size_Billboard_Info_Content_And_Title:16px;
+}
+
+.Full_Card_Billboard_Info {
+    position: relative;
+    background: var(--Top_Bar_And_Billboard_Information_Background_Color);
+     /* border: 4px solid var(--fifth-color); */
+    padding-top: none;
+    Height: 2000px;
+    /*
+    height:100%;
+   height: 150%;
+    */
+    width: 40%;
+    margin-top: 0px;
+    padding: 7px;
+    margin: 0px;
+    float: right;
+    margin-right: 0px;
+
+    border-left: 1px solid black;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Hides Horizontal scroll bar from appearing because there is an animation uses */
+}
+
+.Parent_Billboard_Info {
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 8px;
+    background: var(--Top_Bar_And_Billboard_Information_Background_Color);
+}
+
+.Class_Billboard_Address {
+    background: var(--first-color);
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 3.3vh;
+}
+
+.Column_Divider_By_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.Billboard_Info_section {
+    position: relative;
+    display: inline-block;
+    padding-left: 10%;
+
+}
+
+.Billboard_Price_Section_Title,
+.Billboard_View_Density_Title,
+.Billboard_View_Count_Title,
+.Billboard_Type_Title,
+.Billboard_Minimum_Rental_Period_Title,
+.Billboard_Night_Time_Illumindation_Title,
+.Billboard_Checkbox_Title {
+    font-size: var(--Font_Size_Billboard_Info_Content_And_Title);
+    
+}
+
+.Billboard_Price_Section_Content,
+.Billboard_View_Density_Content,
+.Billboard_View_Count_Content,
+.Billboard_Type_Content,
+.Billboard_Minimum_Rental_Period_Content,
+.Billboard_Night_Time_Illumindation_Content,
+.Select_Price_Dropdown {
+    float: right;
+    padding-right: 10%;
+    font-size: var(--Font_Size_Billboard_Info_Content_And_Title);
+    margin: 0;
+}
+
+.Billboard_View_Density_Content,.Billboard_View_Density_Title{
+
+}
+
+.Billboard_Select_Checkbox {
+    --CheckBox-Size: 30px;
+    width: var(--CheckBox-Size);
+    height: var(--CheckBox-Size);
+    background-color: #4CAF50;
+}
+
+.Enlarge_Slideshow {
+    width: 30px;
+}
+
+.Enlarge_Slideshow:hover {
+    outline: 5px solid var(--first-color);
+    border-radius: 5px;
+    color: red;
+}
+
+.Parent_Add_To_Campaign {
+    display: flex;
+    align-items: start;
+}
+
+.Billboard_Checkbox_Title {
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.Billboard_Type_Content {
+    text-transform: capitalize;
+}
+
+
+/* Price Dropdown */
+/* Reset default styles for the select element */
+/* select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+} */
+
+/* Style for the custom dropdown */
+.Select_Price_Dropdown {
+    padding: 0 8px;
+    font-weight: 600;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    width: fit-content;
+    max-width: 200px;
+    /* Adjust the max-width as needed */
+}
+
+/* Style for the options */
+option {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Hover effect for options */
+option:hover {
+    background-color: #f0f0f0;
+}
+
+/* Only Price */
+.PPM_Option{
+    font-size: 200%;
+}
+
+/* Price  information */
+.PPM_Label{
+    font-size: 100%;
+}
+
+#Small_Marker_Billboard_Information{
+    height: 45px;
+}
+
+#Billboard_Information_Basic_Text,
+#Small_Marker_Billboard_Information {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.Class_Billboard_Address{
+    color: var(--fourth-color);
+}
+
+/*
+.Billboard_Info_section span:nth-child(odd) {
+    background-color: #f9f9f9; 
+}
+
+.Billboard_Info_section span:nth-child(even) {
+    background-color: #ab4242; 
+}
+ */

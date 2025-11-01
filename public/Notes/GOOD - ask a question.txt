@@ -1,0 +1,43 @@
+//Used to send email
+var log = console.log;
+function Ask_A_Question() {
+
+  /*Arr_Campaign = [
+    "A_Billboard_Info_M0",
+    // "A_Billboard_Info_M1",
+    "A_Billboard_Info_M2",
+    // "A_Billboard_Info_M3",
+    "A_Billboard_Info_M4"
+  ];
+  */
+  if (Current_Step_Count >= 2) {
+    return;
+}
+  log("in aask  awuestion")
+
+  //Init_For_PDF();
+  //sendEmail(Arr_Campaign, Campaign_Duration, Desired_Campaign_Start_Date, Billboard_Owner_Data);
+  
+  Init_Email_Data()
+
+  function sendEmail() {
+    $.ajax({
+      url: '/send-email',
+      type: 'POST',
+      //data: JSON.stringify({ Arr_Campaign, Campaign_Duration, Desired_Campaign_Start_Date, Billboard_Owner_Data }),
+      data: JSON.stringify({ Arr_Final_Email_Objects }),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function (response) {
+        console.log(response.message);
+        // You can add additional functionality here, like updating the UI
+      },
+      error: function (xhr, status, error) {
+        console.error('Error sending email:', error);
+      }
+    });
+  }
+
+
+
+}

@@ -27,14 +27,14 @@
     float: right;
     margin-right: 0px;
 
-    border-left: 1px solid black;
+    border-left: 1px solid rgb(155, 155, 155);
     overflow-y: auto;
     overflow-x: hidden;
     /* Hides Horizontal scroll bar from appearing because there is an animation uses */
 }
 
 .Parent_Billboard_Info {
-    border: 1px black solid;
+    border: 1px rgb(151, 151, 151) solid;
     padding: 5px;
     border-radius: 8px;
     background: var(--Top_Bar_And_Billboard_Information_Background_Color);

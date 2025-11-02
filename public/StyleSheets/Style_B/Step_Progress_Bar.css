@@ -43,8 +43,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    --icon-size: 20px;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    padding: 8px;
     border-radius: 50%;
     background: var(--fourth-color);
     margin-bottom: 6px;

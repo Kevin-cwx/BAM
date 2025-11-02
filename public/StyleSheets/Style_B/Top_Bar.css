@@ -3,14 +3,14 @@
   position: relative;
   /* min-height: 30vh;  */
   height: 50%;
-  padding: 0px 05px;
+  padding: 0px 2px;
   padding-top: 5px;
   z-index: 999;
   overflow: hidden;
   display: grid;
   /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: 1fr 1fr 1fr 3fr;
-  border: 1px solid black;
+  border: 1px solid rgb(182, 182, 182);
   column-gap: 0%;
   /* border: 3px var(--fifth-color) solid; */
 }
@@ -18,7 +18,7 @@
 @media screen and (max-width: 1358px) {
   /* Height for small screens */
   #Top_Bar {
-    height: 30vh;
+    height: 26vh;
   }
 }
 

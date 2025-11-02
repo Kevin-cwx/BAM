@@ -131,6 +131,13 @@ $(".maplibregl-ctrl-bottom-left").remove();
 //Removes Map Tiler Reference
 $(".maplibregl-ctrl-attrib-inner").remove();
 
+//Removes Map Tiler Compass
+$(window).on('load', function () {
+  setTimeout(function () {
+    $('.maplibregl-ctrl-compass').remove();
+  }, 1000);
+});
+
 function changeIconColorById(Marker_ID, newIconColor) {
   var features = map.getSource('places')._data.features;
   var found = false;

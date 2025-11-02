@@ -117,3 +117,7 @@ function Open_Catalog() {
 
 }
 
+
+// Set logo text same width as logo image
+
+

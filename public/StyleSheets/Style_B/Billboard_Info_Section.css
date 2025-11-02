@@ -27,7 +27,7 @@
     float: right;
     margin-right: 0px;
 
-    border-left: 1px solid rgb(155, 155, 155);
+    border: 1px solid rgb(155, 155, 155);
     overflow-y: auto;
     overflow-x: hidden;
     /* Hides Horizontal scroll bar from appearing because there is an animation uses */

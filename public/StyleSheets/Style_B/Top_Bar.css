@@ -76,23 +76,21 @@
   height: 0;
 }
 
+.Logo_Container {
+  display: inline-block;
+}
+
 .Map_Logo_Image {
   height: 13vh;
   width: auto;
+  display: block;
+ padding-right: 10px;
 }
 
 #Logo_Text {
-  font-size: 30.5px;
-  /* width: 10px; */
-  margin-top: 5px;
+  font-size: 27px;
   white-space: nowrap;
-}
-
-.Logo_Container {
-  display: inline-flex; /* or flex, depending on layout needs */
-  flex-direction: column; 
-  align-items: left; 
-  margin-right: 20px;
+  display: inline-block;
 }
 
 .Stack_Items_On_Top_Of_Each_Other {

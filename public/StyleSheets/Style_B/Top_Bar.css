@@ -16,6 +16,7 @@
 }
 
 @media screen and (max-width: 1358px) {
+
   /* Height for small screens */
   #Top_Bar {
     height: 26vh;
@@ -36,8 +37,7 @@
   height: min-content;
 }
 
-.Top_Bar_Second_Section {
-}
+.Top_Bar_Second_Section {}
 
 .Top_Bar_Third_Section {
   margin-left: 10%;
@@ -84,7 +84,7 @@
   height: 13vh;
   width: auto;
   display: block;
- padding-right: 10px;
+  padding-right: 10px;
 }
 
 #Logo_Text {
@@ -94,8 +94,8 @@
 }
 
 .Stack_Items_On_Top_Of_Each_Other {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 
   /* position: absolute;
   top: 2%; 
@@ -106,5 +106,23 @@
   gap: 2vh; */
 }
 
+.Parent_Billboard_Type {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-start;
+}
+
 .Parent_Action_Button {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(40px, auto));
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+.Parent_Action_Button .Action_Button,
+.Parent_Action_Button .Button {
+  margin: 0;
 }

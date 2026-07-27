@@ -88,26 +88,28 @@
         <div class="Stack_Items_On_Top_Of_Each_Other">
           <div class="Parent_Billboard_Type">
             <div class="Top_Bar_Title">Filter By Type</div>
-            <div
-              class="Billboard_Type Button Billboard_Type_Not_Selected"
-              id="Billboard_Type_Digital"
-              onclick="Filter_Marker_By_Type('Digital')"
-            >
-              Digital
-            </div>
-            <div
-              class="Billboard_Type Button Billboard_Type_Not_Selected"
-              id="Billboard_Type_Print"
-              onclick="Filter_Marker_By_Type('Print')"
-            >
-              Print
-            </div>
-            <div
-              class="Billboard_Type Button Billboard_Type_Not_Selected"
-              id="Billboard_Type_Both"
-              onclick="Filter_Marker_By_Type('Both')"
-            >
-              Both
+            <div class="Billboard_Type_Buttons">
+              <div
+                class="Billboard_Type Button Billboard_Type_Not_Selected"
+                id="Billboard_Type_Digital"
+                onclick="Filter_Marker_By_Type('Digital')"
+              >
+                Digital
+              </div>
+              <div
+                class="Billboard_Type Button Billboard_Type_Not_Selected"
+                id="Billboard_Type_Print"
+                onclick="Filter_Marker_By_Type('Print')"
+              >
+                Print
+              </div>
+              <div
+                class="Billboard_Type Button Billboard_Type_Not_Selected"
+                id="Billboard_Type_Both"
+                onclick="Filter_Marker_By_Type('Both')"
+              >
+                Both
+              </div>
             </div>
           </div>
 
@@ -216,14 +218,14 @@
             title="View Catalog"
           />
 
-          <!-- <img
-            src="../Media/Ico/chatgpt.png"
+          <img
+            src="../Media/Ico/mic_2.png"
             id="Catalog_Btn"
             alt="View Catalog"
             class="Hide_Billboard_Information_Image Action_Button Button"
             onclick="Start_Speaking()"
             title="Use AI Voice Recognition"
-          /> -->
+          />
 
           <!-- <img src="../Media/Ico/scroll-arrows.png" id="Navigate_Map_With_Keys" alt="Navigate_Map_With_Keys"
                 class="Hide_Billboard_Information_Image Action_Button Button" onclick="Navigate_Map_With_Keys()"
@@ -359,7 +361,7 @@
       class="Parent_Get_Quote Appear_Above_Extra_Black_Translucent_Background"
     >
       <div
-        class="Button Get_Quote_Buttons"
+        class="Button Get_Quote_Buttons Hide"
         id="Download_Quote_Btn"
         onclick="Init_For_PDF()"
       >

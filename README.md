@@ -1,6 +1,6 @@
 # BAM - Billboard Ad Manager
 
-![Logo_3](https://github.com/Kevin-cwx/BAM/assets/87499815/ecdb1c0b-ae7a-4724-ab99-57aa2623ee4e)
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4536dc15-153f-4bd9-936c-28f5c0ccd085" />
 
 ## Description
 

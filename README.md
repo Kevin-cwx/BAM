@@ -12,7 +12,7 @@ BAM - Billboard Ad Manager
 ### Dependencies
 
 * Built as a dynamic web application. Will not be converted to a mobile app.
-* Intended to be used in a group setting, with one person entering the data on the site as the entire group deliberates on the best option.
+* Intended to be used in a group setting, with one person browsing billboards as the rest of the group deliberates on the best options.
 
 ## Future Features
 
